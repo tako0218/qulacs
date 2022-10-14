@@ -151,7 +151,7 @@ public:
      * 順番にすべての量子ゲートを作用する。量子状態の初期化などは行わない。
      * @param[in,out] state 作用する量子状態
      */
-    void update_quantum_state(QuantumStateBase* state);
+    void update_quantum_state(QuantumStateBase* state) const;
 
     /**
      * \~japanese-en 量子回路の指定範囲のみを用いて量子状態をを更新する
@@ -162,7 +162,7 @@ public:
      * @param[in] end_index 修了位置
      */
     void update_quantum_state(
-        QuantumStateBase* state, UINT start_index, UINT end_index);
+        QuantumStateBase* state, UINT start_index, UINT end_index) const;
 
     /////////////////////////////// CHECK PROPERTY OF QUANTUM CIRCUIT
 

@@ -20,7 +20,7 @@
 bool check_gate_index(
     const QuantumCircuit* circuit, const QuantumGateBase* gate);
 
-void QuantumCircuit::update_quantum_state(QuantumStateBase* state) {
+void QuantumCircuit::update_quantum_state(QuantumStateBase* state) const {
     if (state->qubit_count != this->qubit_count) {
         throw InvalidQubitCountException(
             "Error: "
@@ -34,7 +34,7 @@ void QuantumCircuit::update_quantum_state(QuantumStateBase* state) {
 }
 
 void QuantumCircuit::update_quantum_state(
-    QuantumStateBase* state, UINT start, UINT end) {
+    QuantumStateBase* state, UINT start, UINT end) const {
     if (state->qubit_count != this->qubit_count) {
         throw InvalidQubitCountException(
             "Error: "
