@@ -178,7 +178,7 @@ void ParametricQuantumCircuit::add_parametric_multi_Pauli_rotation_gate(
 }
 
 std::vector<double> ParametricQuantumCircuit::backprop_inner_product(
-    QuantumState* bistate) {
+    QuantumState* bistate) const {
     // circuitを実行した状態とbistateの、inner_productを取った結果を「値」として、それを逆誤差伝搬します
     // bistateはノルムが1のやつでなくてもよい
     int n = this->qubit_count;
@@ -258,7 +258,7 @@ std::vector<double> ParametricQuantumCircuit::backprop_inner_product(
 }  // CPP
 
 std::vector<double> ParametricQuantumCircuit::backprop(
-    GeneralQuantumOperator* obs) {
+    GeneralQuantumOperator* obs) const {
     //オブザーバブルから、最終段階での微分値を求めて、backprop_from_stateに流す関数
     //上側から来た変動量 * 下側の対応する微分値 =
     //最終的な変動量になるようにする。
