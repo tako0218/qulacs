@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "qulacs"
 version = "0.5.2"
 description = "Quantum circuit simulator for research"
-authors = [ 
+authors = [
     { name = "QunaSys", Email = "qulacs@qunasys.com" }
 ]
 readme = "README.md"
@@ -47,6 +47,19 @@ ci = [
     "openfermion",
     "mypy",
     "pybind11-stubgen"
+]
+
+doc = [
+    "sphinx",
+    "sphinx-rtd-theme",
+    "breathe",
+    "exhale",
+    "nbsphinx",
+    "recommonmark",
+    "sphinx-copybutton",
+    "ipykernel",
+    "qulacs",
+    "scipy",
 ]
 
 [tool.setuptools]
